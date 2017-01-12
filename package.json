@@ -1,0 +1,19 @@
+{
+  "name": "server-intercom",
+  "version": "1.0.0",
+  "description": "Intercom Server",
+  "main": "app/application.js",
+  "author": "Stanislav German <s.german@rambler-co.ru>",
+  "license": "MIT",
+  "scripts": {
+    "server": "supervisor app/application.js"
+  },
+  "dependencies": {
+    "socketio": "^1.0.0"
+  },
+  "devDependencies": {
+    "should": "^11.1.2",
+    "socket.io-client": "^1.7.2",
+    "supervisor": "^0.12.0"
+  }
+}

@@ -28,7 +28,7 @@ class Server {
         let fromMsg = { from: userName, txt: msg.txt }
         this.clients[msg.to].emit('private message', fromMsg);
       });
-    });
+    })
     return this
   }
 };

@@ -4,6 +4,8 @@ node_js:
 env:
   - CXX=g++-4.8
 addons:
+  code_climate:
+      repo_token: 092584b82178aa6d03e2ff88b75a213fd67a59eb815ae000f017db6f9b09f628
   apt:
     sources:
       - ubuntu-toolchain-r-test

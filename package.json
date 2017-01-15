@@ -7,12 +7,17 @@
   "license": "MIT",
   "scripts": {
     "server": "supervisor app/server.js",
-    "test": "mocha -R spec"
+    "test": "mocha -R spec",
+    "lint": "eslint --fix **/**.js",
+    "ci_lint": "eslint --max-warnings 1 **/**.js"
   },
   "dependencies": {
     "socketio": "^1.0.0"
   },
   "devDependencies": {
+    "eslint": "^3.13.1",
+    "eslint-config-google": "^0.7.1",
+    "eslint-config-walmart": "^1.1.1",
     "mocha": "^3.2.0",
     "should": "^11.1.2",
     "socket.io-client": "^1.7.2",

@@ -1,0 +1,9 @@
+parserOptions:
+  ecmaVersion: 6
+  sourceType: module
+  rules:
+    semi: 2
+
+extends:
+  - walmart/rules/eslint/node/on
+  - walmart/rules/eslint/best-practices/on

@@ -17,3 +17,4 @@ install:
   - yarn
 script:
   - yarn test
+  - yarn ci_lint

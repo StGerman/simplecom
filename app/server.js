@@ -1,6 +1,9 @@
+const io = require('socket.io');
+
 class Server {
   constructor(port) {
-    this.io = require('socket.io').listen(port);
+    this.port = port;
+    this.io = io.listen(port);
     this.logLevel = 0;
     this.clients = {};
 
@@ -22,7 +25,7 @@ class Server {
       });
 
       socket.on('private message', msg => {
-        let fromMsg = {from: userName, txt: msg.txt}
+        let fromMsg = { from: userName, txt: msg.txt }
         this.clients[msg.to].emit('private message', fromMsg);
       });
     });
@@ -30,4 +33,5 @@ class Server {
   }
 };
 
-module.exports = new Server(5000)
+const PORT = 5000
+module.exports = new Server(PORT)
